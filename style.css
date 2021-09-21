@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 /* stylování hlavního menu*/
 
 header {
@@ -73,10 +74,7 @@ li:hover {
 img {
   max-width: 100%;
   height: auto;
-  
 }
-
-
 
 .picture {
   position: relative;
@@ -88,40 +86,69 @@ img {
 }
 
 .pictureText {
- text-align: center;
- color: white;
- padding-top: 40px;
- font-size: 20px;
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  font-size: 20px;
 }
 
 .cestovani {
-  margin: 60px 20px 50px 20px;
+  /*zakladni uprava zobrazení - pro všechny stejná*/
   display: block;
-  
+  margin: 40px 10px 40px 10px;
+  padding: 0px 5px 0px 5px;
 }
+
 .cestovaniText {
   text-align: left;
 }
 
-.cestovaniButton {
-  text-align: center;
-}
-
 .cestovaniPicture {
   height: 300px;
-  
 }
+
 .cestovani2 {
   margin-top: -90px;
   text-align: center;
 }
 
 .kalkulacka {
-  display: flex;
-  background-color: black;
-  color: white;
-  margin: 20px 20px 20px 20px;
-  padding: 0px 30px 0px 30px
+  background-color: white;
+  color: black;
+  display: block;
+  margin: 40px 10px 40px 10px;
+  text-align: right;
+  padding: 0px 5px 0px 5px;
+}
+
+.kalkulackaButton {
+  text-align: center;
+}
+
+.test {
+  background-color: white;
+  color: black;
+  display: block;
+  margin: 40px 10px 40px 10px;
+  text-align: left;
+  padding: 0px 5px 0px 5px;
+}
+
+.testButton {
+  text-align: center;
+}
+
+.kontakt {
+  background-color: white;
+  color: black;
+  display: block;
+  margin: 40px 10px 40px 10px;
+  text-align: right;
+  padding: 0px 5px 0px 5px;
+}
+
+.kontaktButton {
+  text-align: center;
 }
 
 /* Zobrazení pro tablety*/
@@ -130,17 +157,14 @@ img {
   .menuButton {
     display: none;
   }
-
   .menu {
     width: 100%;
   }
-
   .menuContent {
     position: relative;
     display: inline-block;
     box-shadow: none;
     width: 100%;
-    
   }
   .menuContent ul li {
     list-style-type: none;
@@ -148,20 +172,19 @@ img {
     display: inline-block;
     padding-right: 20px;
   }
-
   .menu:hover+.menuIcons {
     margin-top: 0px;
   }
   .picture {
     height: 400px;
   }
-
   .pictureText {
     font-size: 30px;
+    
   }
-
-  .cestovani {
+  .cestovani{
     display: flex;
+    flex-direction: row;
   }
   .cestovaniPicture {
     width: 65%;
@@ -169,14 +192,66 @@ img {
   .cestovani2 {
     width: 35%;
     padding-left: 30px;
-  }
-  .cestovani2 {
     margin-top: 20px;
+    text-align: center;
   }
+
+  .kalkulacka {
+    display: flex;
+    flex-direction:row-reverse;
+    
+  }
+
+  .kalkulackaPicture {
+    width: 250%;
+    float: right;
+  }
+  .kalkulacka2 {
+    width: 35%;
+    padding-left: 30px;
+    margin-top: 20px;
+    
+  }
+  .kalkulackaText {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 40px;
+  }
+
+  .test {
+    display: flex;
+    
+  }
+
+  .testPicture {
+    width: 230%;
+  }
+
+  .testText {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 40px;
+  }
+
+  .kontaktText {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 40px;
+  }
+
+  .kontakt {
+    display: flex;
+    flex-direction:row-reverse;
+  }
+
+  .kontaktPicture {
+    width: 180%;
+    
+  }
+
 }
 
-
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1024px) {
   .picture {
     height: 600px;
   }
@@ -184,7 +259,59 @@ img {
     font-size: 40px;
   }
   .cestovani {
-    margin: 120px 200px 120px 200px;
-  }
   
+   display: flex;
+   flex-direction:column;
+  
+   
+  }
+  .cestovaniText {
+    
+  }
+  .kalkulacka {
+ 
+  display: flex;
+  flex-direction:column;
+  margin-left: -260px;
+  
+  
+ }
+ .kalkulackaText {
+   
+ }
+ 
+
+  .cestovaniPicture {
+    
+  }
+
+  .kalkulackaPicture {
+   width: 130%
+    
+  }
+
+  .test {
+  
+  display: flex;
+  flex-direction:column;
+  
+  }
+
+  .testPicture {
+  width: 150%
+  }
+
+  .testText {
+   
+  }
+
+  .computer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .kontakt {
+    display: none;
+  }
 }
