@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+/* stylování hlavního menu*/
+
+header {
+  text-align: center;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menuButton {
+  /*button který se po najetí kurzorem otevře směrem dolů */
+  width: 100px;
+  height: 50px;
+  background-color: darkolivegreen;
+}
+
+.menuContent {
+  /*obsah menu, odkazy na další stránky*/
+  position: absolute;
+  display: none;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: black;
+  text-align: center;
+  list-style-type: none;
+  background-color: white;
+}
+
+.menuContent li:hover {
+  /*po najetí kurzorem se změní pozadí na zelenou*/
+  background-color: greenyellow;
+}
+
+.menu:hover .menuContent {
+  /*po najetí kurzorem se změní zobraní obsahu menu*/
+  display: block;
+}
+
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.menuIcons {
+  background-color: white;
+  list-style-type: none;
+  padding-top: 20px;
+}
+
+.menuIcons li {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.menu:hover+.menuIcons {
+  margin-top: 120px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+
+
+.picture {
+  position: relative;
+  background-image: url(pic/uvodni.jpg);
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pictureText {
+ text-align: center;
+ color: white;
+ padding-top: 40px;
+ font-size: 20px;
+}
+
+.cestovani {
+  margin: 60px 20px 50px 20px;
+  display: block;
+  
+}
+.cestovaniText {
+  text-align: left;
+}
+
+.cestovaniButton {
+  text-align: center;
+}
+
+.cestovaniPicture {
+  height: 300px;
+  
+}
+.cestovani2 {
+  margin-top: -90px;
+  text-align: center;
+}
+
+.kalkulacka {
+  display: flex;
+  background-color: black;
+  color: white;
+  margin: 20px 20px 20px 20px;
+  padding: 0px 30px 0px 30px
+}
+
+/* Zobrazení pro tablety*/
+
+@media only screen and (min-width: 550px) {
+  .menuButton {
+    display: none;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menuContent {
+    position: relative;
+    display: inline-block;
+    box-shadow: none;
+    width: 100%;
+    
+  }
+  .menuContent ul li {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 20px;
+  }
+
+  .menu:hover+.menuIcons {
+    margin-top: 0px;
+  }
+  .picture {
+    height: 400px;
+  }
+
+  .pictureText {
+    font-size: 30px;
+  }
+
+  .cestovani {
+    display: flex;
+  }
+  .cestovaniPicture {
+    width: 65%;
+  }
+  .cestovani2 {
+    width: 35%;
+    padding-left: 30px;
+  }
+  .cestovani2 {
+    margin-top: 20px;
+  }
+}
+
+
+@media only screen and (min-width: 1024px){
+  .picture {
+    height: 600px;
+  }
+  .pictureText {
+    font-size: 40px;
+  }
+  .cestovani {
+    margin: 120px 200px 120px 200px;
+  }
+  
+}
